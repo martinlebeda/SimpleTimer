@@ -1,0 +1,112 @@
+object Form1: TForm1
+  Left = 761
+  Height = 182
+  Top = 134
+  Width = 302
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsDialog
+  Caption = 'SimpleTimer'
+  ClientHeight = 182
+  ClientWidth = 302
+  FormStyle = fsSystemStayOnTop
+  OnDeactivate = FormDeactivate
+  OnWindowStateChange = FormWindowStateChange
+  Position = poScreenCenter
+  LCLVersion = '2.0.12.0'
+  object mainLabel: TLabel
+    Left = 0
+    Height = 1
+    Top = 0
+    Width = 302
+    Align = alTop
+    Alignment = taCenter
+    Font.Height = -66
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object startBtn: TButton
+    Left = 141
+    Height = 25
+    Top = 134
+    Width = 75
+    Caption = 'start'
+    OnClick = startBtnClick
+    ParentFont = False
+    TabOrder = 4
+  end
+  object HourEdit: TSpinEdit
+    Left = 26
+    Height = 23
+    Top = 134
+    Width = 50
+    ParentFont = False
+    TabOrder = 2
+    Value = 1
+  end
+  object MinuteEdit: TSpinEdit
+    Left = 83
+    Height = 23
+    Top = 134
+    Width = 50
+    MaxValue = 59
+    ParentFont = False
+    TabOrder = 3
+  end
+  object WarnEdit: TSpinEdit
+    Left = 243
+    Height = 23
+    Top = 137
+    Width = 44
+    ParentFont = False
+    TabOrder = 5
+    Value = 10
+  end
+  object Button30: TButton
+    Left = 26
+    Height = 25
+    Top = 102
+    Width = 75
+    Caption = '30 min'
+    OnClick = Button30Click
+    TabOrder = 0
+  end
+  object Button2h: TButton
+    Left = 104
+    Height = 25
+    Top = 102
+    Width = 75
+    Caption = '2 h'
+    OnClick = Button2hClick
+    TabOrder = 1
+  end
+  object hideBtn: TButton
+    Left = 243
+    Height = 25
+    Top = 104
+    Width = 48
+    Caption = 'hide'
+    OnClick = hideBtnClick
+    ParentFont = False
+    TabOrder = 6
+  end
+  object MainTimer: TTimer
+    Enabled = False
+    Interval = 60000
+    OnTimer = MainTimerTimer
+    Left = 250
+    Top = 96
+  end
+  object MinTimer: TTimer
+    Enabled = False
+    Interval = 2000
+    OnTimer = MinTimerTimer
+    Left = 200
+    Top = 96
+  end
+  object ApplicationProperties1: TApplicationProperties
+    OnDeactivate = ApplicationProperties1Deactivate
+    Left = 248
+    Top = 56
+  end
+end
