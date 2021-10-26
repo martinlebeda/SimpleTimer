@@ -15,6 +15,9 @@ uses
 { TODO : form icon }
 { TODO : run from command line with value }
 { TODO : public on github }
+{ TODO : remember last state }
+{ TODO : customize pomodoro interval }
+
 
 begin
   RequireDerivedFormResource:=True;

@@ -14,8 +14,10 @@ type
 
   TForm1 = class(TForm)
     ApplicationProperties1: TApplicationProperties;
+    Button1h: TButton;
     Button30: TButton;
     Button2h: TButton;
+    Button10: TButton;
     startBtn: TButton;
     mainLabel: TLabel;
     HourEdit: TSpinEdit;
@@ -25,6 +27,8 @@ type
     WarnEdit: TSpinEdit;
     MainTimer: TTimer;
     procedure ApplicationProperties1Deactivate(Sender: TObject);
+    procedure Button10Click(Sender: TObject);
+    procedure Button1hClick(Sender: TObject);
     procedure Button2hClick(Sender: TObject);
     procedure Button30Click(Sender: TObject);
     procedure FormDeactivate(Sender: TObject);
@@ -94,6 +98,18 @@ procedure TForm1.ApplicationProperties1Deactivate(Sender: TObject);
 begin
   if MainTimer.Enabled and (FCounter > 0) then
      MinTimer.Enabled := True;
+end;
+
+procedure TForm1.Button10Click(Sender: TObject);
+begin
+  FCounter := 10;
+  startTimer;
+end;
+
+procedure TForm1.Button1hClick(Sender: TObject);
+begin
+  FCounter := 60;
+  startTimer;
 end;
 
 procedure TForm1.MainTimerTimer(Sender: TObject);

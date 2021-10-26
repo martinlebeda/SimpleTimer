@@ -33,7 +33,7 @@ object Form1: TForm1
     Caption = 'start'
     OnClick = startBtnClick
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 7
   end
   object HourEdit: TSpinEdit
     Left = 26
@@ -41,7 +41,7 @@ object Form1: TForm1
     Top = 134
     Width = 50
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 5
     Value = 1
   end
   object MinuteEdit: TSpinEdit
@@ -51,44 +51,63 @@ object Form1: TForm1
     Width = 50
     MaxValue = 59
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 6
+    Value = 30
   end
   object WarnEdit: TSpinEdit
     Left = 243
     Height = 23
-    Top = 137
+    Top = 134
     Width = 44
     ParentFont = False
-    TabOrder = 5
+    TabOrder = 8
     Value = 10
   end
   object Button30: TButton
-    Left = 26
+    Left = 74
     Height = 25
     Top = 102
-    Width = 75
+    Width = 50
     Caption = '30 min'
     OnClick = Button30Click
-    TabOrder = 0
+    TabOrder = 1
   end
   object Button2h: TButton
-    Left = 104
+    Left = 172
     Height = 25
     Top = 102
-    Width = 75
+    Width = 48
     Caption = '2 h'
     OnClick = Button2hClick
-    TabOrder = 1
+    TabOrder = 3
   end
   object hideBtn: TButton
     Left = 243
     Height = 25
-    Top = 104
+    Top = 102
     Width = 48
     Caption = 'hide'
     OnClick = hideBtnClick
     ParentFont = False
-    TabOrder = 6
+    TabOrder = 4
+  end
+  object Button1h: TButton
+    Left = 124
+    Height = 25
+    Top = 102
+    Width = 48
+    Caption = '1 h'
+    OnClick = Button1hClick
+    TabOrder = 2
+  end
+  object Button10: TButton
+    Left = 24
+    Height = 25
+    Top = 102
+    Width = 50
+    Caption = '10 min'
+    OnClick = Button10Click
+    TabOrder = 0
   end
   object MainTimer: TTimer
     Enabled = False
